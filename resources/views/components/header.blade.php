@@ -13,7 +13,9 @@
             </div>
             <div class="w-fit xs:flex justify-end items-center gap-4 hidden">
                 <x-search-button />
-                <x-user-navitem />
+                <a href="{{route('profile')}}">
+                    <x-user-navitem />
+                </a>
                 <x-shopping-cart-button />
             </div>
         </div>

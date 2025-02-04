@@ -24,11 +24,15 @@ new #[Layout('layouts.guest')] class extends Component
     }
 }; ?>
 
-<div>
+<div class="wrapper flex-1 flex flex-col gap-20 justify-center items-center w-full">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form wire:submit="login">
+    <h1 class="text-center text-black text-3xl font-black">
+        {{__('Iniciar sesión')}}
+    </h1>
+
+    <form wire:submit="login" class="w-full max-w-md">
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
